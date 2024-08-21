@@ -11,7 +11,7 @@ function is-logged-into-tenant-by-name() {
 
     logged_into_domain_id="$( az rest \
         --method get \
-        --url https://graph.microsoft.com/v1.0/domains \
+        --url https://microsoftgraph.chinacloudapi.cn/v1.0/domains \
         --query 'value[?isDefault].id' -o tsv 2> /dev/null \
           || false; return )"
 
