@@ -78,7 +78,7 @@ function is-permission-assigned() {
 
     result="$( az rest \
         --method GET \
-        --url "https://graph.microsoft.com/v1.0/servicePrincipals/${principal_object_id}/appRoleAssignments" \
+        --url "https://microsoftgraph.chinacloudapi.cn/v1.0/servicePrincipals/${principal_object_id}/appRoleAssignments" \
         --query "value \
             | [?appRoleId == '${permission_id}'].appRoleId
             | [0]" \
@@ -132,7 +132,7 @@ function assign-permissions-to-service-principal() {
 
     # assign permission to service principal to read and write policy keys
     az rest --method POST \
-            --uri "https://graph.microsoft.com/v1.0/servicePrincipals/${principal_object_id}/appRoleAssignments" \
+            --uri "https://microsoftgraph.chinacloudapi.cn/v1.0/servicePrincipals/${principal_object_id}/appRoleAssignments" \
             --headers "Content-Type=application/json" \
             --body "${app_role_assignment_body}" > /dev/null\
             || echo "Failed to assign permission to service principal to read and write policy keys" \

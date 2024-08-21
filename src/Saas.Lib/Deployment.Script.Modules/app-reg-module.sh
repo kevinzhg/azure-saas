@@ -91,7 +91,7 @@ function add-permission-scopes() {
     done
 
     # Microsoft Graph API for applications
-    graph_url="https://graph.microsoft.com/v1.0/applications/${obj_id}"
+    graph_url="https://microsoftgraph.chinacloudapi.cn/v1.0/applications/${obj_id}"
 
     # add permissions to app registration using Microsoft Graph API
     az rest \
@@ -432,7 +432,7 @@ function set-access-token-accepted-version-to-one() {
 
     body=$("create-access-token-accepted-version-to-one-body")
     # Microsoft Graph API for applications
-    graph_url="https://graph.microsoft.com/v1.0/applications/${obj_id}"
+    graph_url="https://microsoftgraph.chinacloudapi.cn/v1.0/applications/${obj_id}"
 
     # add permissions to app registration using Microsoft Graph API
     az rest \
@@ -455,7 +455,7 @@ function add-signout-url() {
 
     body=$(create-signout-body "${signout_url}")
     # Microsoft Graph API for applications
-    graph_url="https://graph.microsoft.com/v1.0/applications/${obj_id}"
+    graph_url="https://microsoftgraph.chinacloudapi.cn/v1.0/applications/${obj_id}"
 
     # add permissions to app registration using Microsoft Graph API
     az rest \

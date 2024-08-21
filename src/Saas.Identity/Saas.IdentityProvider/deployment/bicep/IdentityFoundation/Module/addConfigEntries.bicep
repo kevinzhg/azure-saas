@@ -67,13 +67,13 @@ var appConfigStore = {
     }
     {
       key: '${msGraphKeyName}:BaseUrl'
-      value: 'https://graph.microsoft.com/v1.0'
+      value: 'https://microsoftgraph.chinacloudapi.cn/v1.0'
       isSecret: false
       contentType: 'text/plain'
     }
     {
       key: '${msGraphKeyName}:Scopes'
-      value: 'https://graph.microsoft.com/.default'
+      value: 'https://microsoftgraph.chinacloudapi.cn/.default'
       isSecret: false
       contentType: 'text/plain'
     }

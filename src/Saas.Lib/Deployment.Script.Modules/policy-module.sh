@@ -95,7 +95,7 @@ function create-policy-key-set() {
     local options="$4"
     local secret="$5"
 
-    create_uri="https://graph.microsoft.com/beta/trustFramework/keySets"
+    create_uri="https://microsoftgraph.chinacloudapi.cn/beta/trustFramework/keySets"
 
     policy_key_create_body="$(create-policy-key-create-request "${name}")"
 
@@ -111,9 +111,9 @@ function create-policy-key-set() {
     local generate_uri
 
     if [[ "${options}" == "Generate" ]]; then
-        generate_uri="https://graph.microsoft.com/beta/trustFramework/keySets/B2C_1A_${name}/generateKey"
+        generate_uri="https://microsoftgraph.chinacloudapi.cn/beta/trustFramework/keySets/B2C_1A_${name}/generateKey"
     elif [[ "${options}" == "Manual" ]]; then
-        generate_uri="https://graph.microsoft.com/beta/trustFramework/keySets/B2C_1A_${name}/uploadSecret"
+        generate_uri="https://microsoftgraph.chinacloudapi.cn/beta/trustFramework/keySets/B2C_1A_${name}/uploadSecret"
     fi
 
     echo "Generating policy key for '${name}' with option '${options}'." |
@@ -148,7 +148,7 @@ function upload-custom-policy() {
     local id="$1"
     local policy_xml_path="$2"
 
-    uri="https://graph.microsoft.com/beta/trustFramework/policies/${id}/\$value"
+    uri="https://microsoftgraph.chinacloudapi.cn/beta/trustFramework/policies/${id}/\$value"
     headers="Content-Type=application/xml"
 
     # removing the BOM from the file or az rest will choke on it.
@@ -181,7 +181,7 @@ function upload-custom-policy() {
 function policy-key-exist() {
     local id="$1"
 
-    get_uri="https://graph.microsoft.com/beta/trustFramework/keySets/B2C_1A_${id}"
+    get_uri="https://microsoftgraph.chinacloudapi.cn/beta/trustFramework/keySets/B2C_1A_${id}"
 
     policy_key="$(az rest --method GET \
         --uri "${get_uri}" \

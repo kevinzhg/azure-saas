@@ -28,7 +28,7 @@ public static partial class SaasIdentityConfigurationBuilderExtensions
             case null when (typeof(TProvider).Equals(typeof(ISaasMicrosoftGraphApi))):
                 {
                     services.Configure<SaasApiScopeOptions<TProvider>>(options
-                        => options.Scopes = new[] { "https://graph.microsoft.com/.default" });
+                        => options.Scopes = new[] { "https://microsoftgraph.chinacloudapi.cn/.default" });
                     break;
                 }
             case null:
