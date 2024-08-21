@@ -72,7 +72,7 @@ cd src/Saas.Identity/Saas.IdentityProvider/deployment
 To ensure that you are correctly logged into your Azure tenant, please run this Az Cli command and follow the instructions. 
 
 ```bash
-az login --scope "https://graph.microsoft.com/.default"
+az login --scope "https://microsoftgraph.chinacloudapi.cn"
 ```
 
 > *Important*: The deployment script expects that you have permissions normally associated development and managing resources on the Azure tenant you are planning to use.
@@ -200,7 +200,7 @@ While running the script the second time, you will be asked to log in once, and 
 
 1. The first log in, is for your main Azure tenant. 
 
-   > *Tip*: This step will likely be skipped since you're already logged in to the specified tenant - i.e., when you used the command: `az login --scope "https://graph.microsoft.com/.default"` 
+   > *Tip*: This step will likely be skipped since you're already logged in to the specified tenant - i.e., when you used the command: `az login --scope "https://microsoftgraph.chinacloudapi.cn"` 
 
    > *Info*: The script is smart enough to utilize your existing  Azure token, that is cached and persisted, outside of the container.
 

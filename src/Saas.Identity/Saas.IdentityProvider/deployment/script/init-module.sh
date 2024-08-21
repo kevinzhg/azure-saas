@@ -75,7 +75,7 @@ function check-settings() {
         is-guid ".initConfig.subscriptionId" 1>/dev/null &&
             value-exist ".initConfig.naming.solutionName" 1>/dev/null &&
             value-exist ".initConfig.naming.solutionPrefix" 1>/dev/null &&
-            is-valid-b2c-location ".initConfig.azureb2c.location" 1>/dev/null &&
+            #is-valid-b2c-location ".initConfig.azureb2c.location" 1>/dev/null &&
             value-exist ".initConfig.azureb2c.countryCode" 1>/dev/null &&
             is-valid-b2c-sku ".initConfig.azureb2c.skuName" 1>/dev/null &&
             is-valid-b2c-tier ".initConfig.azureb2c.tier" 1>/dev/null &&
